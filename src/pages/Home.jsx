@@ -1,7 +1,13 @@
+import Banner from "../components/Banner";
+import Products from "../components/Products";
+import Service from "../components/Service";
+
 const Home = () => {
     return (
         <div>
-            <p>this is home</p>
+            <Banner></Banner>
+            <Service></Service>
+            <Products></Products>
         </div>
     );
 };
