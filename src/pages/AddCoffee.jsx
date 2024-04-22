@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import GoHome from "../components/GoHome";
 
 const AddCoffee = () => {
@@ -18,7 +19,20 @@ const AddCoffee = () => {
 
         const newCoffee = { name, chef, supplier, taste, category, price, details, photo };
 
-        
+        fetch('http://localhost:5001/coffees', {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newCoffee)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if(data.insertedId) {
+                    form.reset();
+                    toast.success('Coffee added successfully');
+                }
+            })        
     }
 
     return (
