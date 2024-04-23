@@ -9,7 +9,7 @@ const CoffeeCard = ({ coffee, handleDeleteCoffee }) => {
     const { _id, name, chef, price, photo } = coffee;
 
     return (
-        <div className="card flex-col lg:flex-row p-8 card-side bg-[#F5F4F1] rounded-lg shadow-xl">
+        <div className="card flex-col lg:flex-row p-8 card-side bg-[#F5F4F1] rounded-lg shadow-xl bg-opacity-60">
             <figure><img src={photo} alt="Movie" /></figure>
             <div className="card-body">
                 <p className='text-xl'><span className='font-semibold'>Name: </span><span className='opacity-70'>{name}</span></p>

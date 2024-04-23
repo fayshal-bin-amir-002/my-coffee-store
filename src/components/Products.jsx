@@ -6,7 +6,7 @@ import CoffeeCard from './CoffeeCard';
 
 const Products = ({ coffees, handleDeleteCoffee }) => {
     return (
-        <div style={{ backgroundImage: `url(${bg})` }} className="w-full h-full p-6 my-14 lg:my-28">
+        <div style={{ backgroundImage: `url(${bg})` }} className="w-full h-full p-6 my-14 lg:my-28 bg-no-repeat bg-cover object-cover">
             <div className="text-center mb-6 lg:mb-12">
                 <p className="text-2xl mb-2">--- Sip & Savor ---</p>
                 <h1 className="mb-5 text-3xl lg:text-5xl font-bold font-rancho">Our Popular Products</h1>
